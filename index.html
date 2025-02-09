@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saeed Abdilahi</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <h1 class="logo-heading">MyPortfolio</h1>
+            </div>
+            <nav class="menu" aria-label="Main Navigation">
+                <ul class="menu-list">
+                    <li><a href="#home" aria-label="Home">Home</a></li>
+                    <li><a href="#about" aria-label="About">About</a></li>
+                    <li><a href="#services" aria-label="Services">Services</a></li>
+                    <li><a href="#portfolio" aria-label="Portfolio">Portfolio</a></li>
+                    <li><a href="#contact" aria-label="Contact">Contact</a></li>
+                    <li><a href="#resume" aria-label="Resume">Resume</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger">&#9776;</div>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="intro">
+            <h2>Hello, I'm <span>Saeed Abdilahi</span></h2>
+            <p>A passionate web developer</p>
+            <div class="intro-buttons">
+                <a href="#portfolio" class="btn">View My Work</a>
+                <a href="#contact" class="btn ghost-btn">Contact Me</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>I'm a web developer with a passion for creating beautiful and functional websites. I specialize in front-end
+            development, with experience in HTML, CSS, JavaScript, and React. I love learning new technologies and
+            improving my skills.</p>
+        <img src="{{ url_for('static', filename='assets/images/me.jpg') }}" alt="Profile Image">
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <h2>My Portfolio</h2>
+        <div class="portfolio-items">
+            <div class="portfolio-item">
+                <img src="{{ url_for('static', filename='assets/images/webapp.jpg') }}" alt="Fully Functional Web App">
+                <h3>Fully Functional Web App</h3>
+                <p>A full-stack web application developed using JavaScript, HTML5, CSS, React, and SQL.</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="{{ url_for('static', filename='assets/images/cpu.jpg') }}" alt="Virtual Computer">
+                <h3>Virtual Computer</h3>
+                <p>Simulated basic CPU operations and memory management.</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="{{ url_for('static', filename='assets/images/car.png') }}" alt="Ridesharing App">
+                <h3>Ridesharing App</h3>
+                <p>A capstone project featuring ride scheduling, user authentication, and real-time tracking.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <form method="POST" action="/contact">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <section id="resume" class="resume">
+        <!-- Embedded PDF Viewer -->
+        <embed src="{{ url_for('static', filename='assets/images/Saeed_Abdilahi_Resume.pdf') }}" type="application/pdf" width="100%" height="600px" />
+        <!-- Download Button -->
+        <a href="{{ url_for('static', filename='assets/images/S.pdf') }}" download class="btn">Download Resume</a>
+    </section>
+    
+    <footer>
+        <ul>
+            <li><a href="https://www.linkedin.com/in/saeedabdilahi" target="_blank">LinkedIn</a></li>
+            <li><a href="https://github.com/saeedabdilahi" target="_blank">GitHub</a></li>
+            <li><a href="https://twitter.com/saeedabdilahi" target="_blank">Twitter</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
