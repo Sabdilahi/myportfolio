@@ -40,9 +40,11 @@
 
     <section id="about" class="about">
         <h2>About Me</h2>
-        <p>I'm a web developer with a passion for creating beautiful and functional websites. I specialize in front-end
+        <p>
+            I'm a web developer with a passion for creating beautiful and functional websites. I specialize in front-end
             development, with experience in HTML, CSS, JavaScript, and React. I love learning new technologies and
-            improving my skills.</p>
+            improving my skills.
+        </p>
         <img src="me.jpg" alt="Profile Image">
     </section>
 
@@ -50,17 +52,17 @@
         <h2>My Portfolio</h2>
         <div class="portfolio-items">
             <div class="portfolio-item">
-                <img src="{{ url_for('static', filename='assets/images/webapp.jpg') }}" alt="Fully Functional Web App">
+                <img src="webapp.jpg" alt="Fully Functional Web App">
                 <h3>Fully Functional Web App</h3>
                 <p>A full-stack web application developed using JavaScript, HTML5, CSS, React, and SQL.</p>
             </div>
             <div class="portfolio-item">
-                <img src="{{ url_for('static', filename='assets/images/cpu.jpg') }}" alt="Virtual Computer">
+                <img src="cpu.jpg" alt="Virtual Computer">
                 <h3>Virtual Computer</h3>
                 <p>Simulated basic CPU operations and memory management.</p>
             </div>
             <div class="portfolio-item">
-                <img src="{{ url_for('static', filename='assets/images/car.png') }}" alt="Ridesharing App">
+                <img src="car.png" alt="Ridesharing App">
                 <h3>Ridesharing App</h3>
                 <p>A capstone project featuring ride scheduling, user authentication, and real-time tracking.</p>
             </div>
@@ -79,9 +81,9 @@
 
     <section id="resume" class="resume">
         <!-- Embedded PDF Viewer -->
-        <embed src="{{ url_for('static', filename='assets/images/Saeed_Abdilahi_Resume.pdf') }}" type="application/pdf" width="100%" height="600px" />
+        <embed src="aeed_Abdilahi_Resume.pdf" type="application/pdf" width="100%" height="600px" />
         <!-- Download Button -->
-        <a href="{{ url_for('static', filename='assets/images/S.pdf') }}" download class="btn">Download Resume</a>
+        <a href="S.pdf" download class="btn">Download Resume</a>
     </section>
     
     <footer>
