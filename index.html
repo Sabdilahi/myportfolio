@@ -93,5 +93,15 @@
             <li><a href="https://twitter.com/saeedabdilahi" target="_blank">Twitter</a></li>
         </ul>
     </footer>
+     <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const hamburger = document.querySelector(".hamburger");
+            const menu = document.querySelector(".menu-list");
+
+            hamburger.addEventListener("click", function () {
+                menu.classList.toggle("active");
+            });
+        });
+    </script>
 </body>
 </html>
